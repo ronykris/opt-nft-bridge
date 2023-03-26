@@ -1,6 +1,6 @@
 import Web3 from "web3";
 import dotenv from 'dotenv'
-import { stake, getMerkleRoot, srcObj } from "./utils";
+import { stake, getMerkleRoot, srcObj } from "./utils.js";
 
 async function monitor() {
     //const abi = [...] // ABI of spokebridge.sol
@@ -44,10 +44,11 @@ async function monitor() {
 }
 
 async function main() {
-    const srcStake = await stake(src)
-    const dstStake = await stake(dst)
-    if (srcStake === 'Success' && dstStake === 'Success') monitor()
-    else console.log('User to stake funds in the src and dst chains before proceeding!')
+    //const srcStake = await stake('src')
+    //const dstStake = await stake('dst')
+    //if (srcStake === 'Success' && dstStake === 'Success') monitor()
+    //else console.log('User to stake funds in the src and dst chains before proceeding!')
+    while (1) monitor()
 
 }
 
